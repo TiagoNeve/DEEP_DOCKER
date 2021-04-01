@@ -28,6 +28,12 @@ docker-compose up -d -> Executa o docker-compose e sobe as configuração no arq
 
 docker-compose down -> Tira os serviços que foram sobidos com o docker compose.
 
+docker scan [nomeDaImagem] -> Faz um scan para verificar as vulnerabilidades 
+
+docker image history [nomeDaImagem] -> Lista os históricos de acontecimento relacionado a imagem
+
+
+
 
 ## COMPOSE
 
@@ -84,4 +90,10 @@ No arquivo de compose você pode declarar todos os serviços necessários da apl
 um único comando.
 No compose você pode declarar tanto os serviços que serão utilizados, como tambéms os volumes e networks,
 sendo bastante completo para a geração de container com maior velocidade.
+
+É sempre bom verificar quão seguro está a sua imagem, por isso utilize o comando: docker scan [nome da imagem] 
+para realizar um scan nessa imagem e verfiicar se esta segura.
+
+É possível criar um arquivo .dockerignore, para que o docker não reflita pastas ou arquivos desnecessários
+para o container.
 
