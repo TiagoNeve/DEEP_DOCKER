@@ -16,3 +16,9 @@ docker images -> Lista todas as imagens que estão na sua máquina.
 
 docker login -u [Seu nome de usuário no Docker HUB] -> Inicia um login para poder dar push das imagens que forem buildadas.
 
+docker exec -it(Interativo) [id do container] -> Acessa o CLI do container.
+
+docker volume create [Nome do volume] -> Cria um volume para a persistência de dados
+
+docker run -dp [portHost:portDocker] -v(Volume) [volumeHost:PathDocker] [image]
+
