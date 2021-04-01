@@ -22,3 +22,16 @@ docker volume create [Nome do volume] -> Cria um volume para a persistência de 
 
 docker run -dp [portHost:portDocker] -v(Volume) [volumeHost:PathDocker] [image]
 
+docker run -it --network [nomeDoNetowrk] [nomeDaImagem]
+
+
+
+## Explicações
+
+Container networking -> Containers que estiverem na mesma networking podem se comunicar, um container
+pode ter vários networkings e esses podem se comunicar para troca de dados. Isso é bom pois cada serviço
+fica separado e caso seja necessário dar manutenção em um, o outro serviço não ficará parado em conjunto,
+bastando criar um novo serviço com um backup e subir no network e gerar a conexão modificando o host, essa
+mudança é gerada em alguns minutos e pode não ser perceptível para o usuário final. 
+
+--> Docker compose: 
